@@ -5,6 +5,8 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,13 +19,13 @@ class App extends StatelessWidget {
 class AppHomePage extends StatelessWidget {
   String title;
 
-  AppHomePage({required this.title});
+  AppHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.title),
+          title: Text(title),
         ),
         body: PasswordWidget(label: 'Password',));
   }
@@ -34,7 +36,7 @@ class PasswordWidget extends StatefulWidget{
 
   String label;
 
-  PasswordWidget({required this.label});
+  PasswordWidget({super.key, required this.label});
 
   @override
   State<PasswordWidget> createState() => _PasswordWidgetState();

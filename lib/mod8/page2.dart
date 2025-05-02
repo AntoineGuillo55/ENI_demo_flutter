@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PageTwo extends StatelessWidget {
+  const PageTwo({super.key});
+
 
   // Récupération
   @override

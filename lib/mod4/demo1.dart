@@ -1,4 +1,3 @@
-import 'package:flutter/rendering.dart';
 
 void main () {
 
@@ -13,7 +12,7 @@ void main () {
 
   const age = 25;
 
-  String? city = null;
+  String? city;
 
   print(city?.toUpperCase());
 }

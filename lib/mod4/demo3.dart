@@ -26,7 +26,7 @@ class Cartoon {
   }
 
   int get getDuration {
-    return this.duration;
+    return duration;
   }
 }
 

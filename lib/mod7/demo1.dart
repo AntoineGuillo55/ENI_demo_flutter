@@ -5,6 +5,8 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,19 +19,21 @@ class App extends StatelessWidget {
 class AppHomePage extends StatelessWidget {
   String title;
 
-  AppHomePage({required this.title});
+  AppHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.title),
+          title: Text(title),
         ),
         body: DemoForm());
   }
 }
 
 class DemoForm extends StatefulWidget {
+  const DemoForm({super.key});
+
   @override
   State<DemoForm> createState() => _DemoFormState();
 }
@@ -110,14 +114,18 @@ class _DemoFormState extends State<DemoForm> {
                   validator: validateSport,
                   items: [
                     DropdownMenuItem(
-                        child: Text("-Choisir un sport-"), value: null),
-                    DropdownMenuItem(child: Text("Curling"), value: "curling"),
+                        value: null,
+                        child: Text("-Choisir un sport-")),
+                    DropdownMenuItem(value: "curling", child: Text("Curling")),
                     DropdownMenuItem(
-                        child: Text("Air Poney"), value: "airponey"),
+                        value: "airponey",
+                        child: Text("Air Poney")),
                     DropdownMenuItem(
-                        child: Text("Quidditch"), value: "quidditch"),
+                        value: "quidditch",
+                        child: Text("Quidditch")),
                     DropdownMenuItem(
-                        child: Text("Disco foot"), value: "discofoot"),
+                        value: "discofoot",
+                        child: Text("Disco foot")),
                   ],
                   onChanged: (value) {}),
               Row(

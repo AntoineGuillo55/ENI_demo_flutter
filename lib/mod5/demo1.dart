@@ -17,6 +17,8 @@ class App extends StatelessWidget {
 }
 
 class AppHomePage extends StatelessWidget {
+  const AppHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +53,8 @@ class AppHomePage extends StatelessWidget {
 }
 
 class FlexWidget extends StatelessWidget {
+  const FlexWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Flex(
